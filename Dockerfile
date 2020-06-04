@@ -1,5 +1,7 @@
-FROM ubuntu
-RUN apt-get update
-RUN apt-get install -y apache2
-ADD ./index.html /var/www/html
+FROM ubuntu:latest
+ARG DEBIAN_FRONTEND=noninteractive
+RUN  apt-get update \
+    && apt-get install -y apache2
+ADD . /var/www/html
+#ADD images /var/www/html
 CMD ["apachectl", "-D", "FOREGROUND"]

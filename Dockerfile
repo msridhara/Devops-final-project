@@ -5,4 +5,7 @@ RUN  apt-get update \
 ADD . /var/www/html
 #ADD images /var/www/html
 CMD ["apachectl", "-D", "FOREGROUND"]
+<<<<<<< HEAD
 
+=======
+>>>>>>> develop
